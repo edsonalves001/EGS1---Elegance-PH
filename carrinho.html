@@ -1,0 +1,443 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Imagens/ICON ELEGANCE PH.PNG">
+<header>
+  <title>Carrinho</title>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    html,
+    body {
+      font-family: "Poppins";
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: white;
+    }
+
+    .menu {
+      background-color: black;
+      padding: 0;
+      margin: 0;
+      height: 20%;
+      width: 100%;
+    }
+
+    .lupa {
+      background: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .filtro {
+      background: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+
+
+    .button {
+      width: 14vw;
+      height: 4vh;
+      border: 1px solid white;
+      border-radius: 10px;
+      background-color: transparent;
+      text-align: center;
+      color: white;
+
+    }
+
+
+
+    .logo {
+      position: absolute;
+      top: -20%;
+      left: 2%;
+      height: 10vw;
+    }
+
+    .topicos {
+      text-decoration: none;
+    }
+
+    .menuSub {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 5vh 15vw;
+    }
+
+    .grupo1,
+    .grupo2,
+    .grupo3 {
+      display: flex;
+      align-items: center;
+      gap: 2vw;
+      height: auto;
+      margin-top: 2.5%;
+    }
+
+    .barra-amarela {
+      background-color: #D99E52;
+      height: 1%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .barra-amarelaBaix {
+      background-color: #D99E52;
+      height: 1%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+
+
+    .rodape {
+      background-color: black;
+      margin-top: 10%;
+      min-height: 30vh;
+    }
+
+    .contRodape {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+      margin-top: 3%;
+    }
+
+    .WhtsAppFixo {
+      position: fixed;
+      bottom: 1vh;
+      right: 1vw;
+      z-index: 9999;
+    }
+
+    .WhtsAppFixo img {
+      width: 50px;
+      height: auto;
+    }
+
+
+    .txtRodape {
+      color: white;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1.5% 0;
+      background-color: black;
+    }
+
+    .direitos {
+      color: white;
+      max-width: 30%;
+      margin: 0% auto;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .carrinho {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid black;
+      border-radius: 12px;
+      width: 60%;
+      margin-top: 3%;
+    }
+
+    .finalizar {
+      margin-top: 30%;
+    }
+
+    .compra {
+      border: 2px solid black;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .limpar {
+      border: 2px solid black;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .um img {
+      width: 500px;
+      height: auto;
+    }
+
+    .menuMobile {
+      display: none;
+    }
+
+    .cont {
+      display: none;
+    }
+
+    .lojaMoba {
+      display: none;
+      width: 100%;
+      padding: 20px;
+      background-color: white;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .topicos {
+        display: none;
+      }
+
+      .menu {
+        width: 100%;
+        height: auto;
+
+      }
+
+      .grupo1,
+      .grupo2,
+      .grupo3 {
+        display: flex;
+        margin-top: auto;
+      }
+
+      .menuMobile {
+        display: block;
+        position: absolute;
+        left: 3%;
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .logo {
+        position: relative;
+        top: 0;
+        height: 20vh;
+        margin-left: 35%;
+      }
+
+
+      .button {
+        position: relative;
+        width: 45vw;
+        height: 6vw;
+        position: absolute;
+        left: 15%;
+      }
+
+      .lupa {
+        position: absolute;
+        left: 62%;
+      }
+
+      .lupa img {
+        height: 6vw;
+        top: 32%;
+      }
+
+      .filtro {
+        position: absolute;
+        left: 68%;
+      }
+
+      .filtro img {
+        height: 8vw;
+      }
+
+      .sacola {
+        position: absolute;
+        left: 80%;
+      }
+
+      .produtos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 5%;
+      }
+
+      .produto {
+        width: 48%;
+        max-width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .produto a {
+        display: block;
+        width: 90%;
+        height: 50vh;
+      }
+
+      .produto a img {
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1.5vw;
+      }
+
+      .rodape {
+        width: 100%;
+      }
+
+      .caixaCompr {
+        display: none;
+      }
+
+      .contRodape {
+        gap: 1%;
+      }
+
+      .logoRodap {
+        width: 35%;
+      }
+
+      .Mobil {
+        width: 100%;
+        background-color: black;
+        display: flex;
+        gap: 3%;
+        flex-direction: column;
+      }
+
+      .log {
+        width: 100%;
+        margin-top: auto;
+      }
+
+      .cont {
+        display: none;
+      }
+
+      .marcas {
+        width: 100%;
+        gap: 10%;
+        margin-top: 10%;
+      }
+
+      .logos img {
+        width: 10%;
+
+      }
+
+      .Mob {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        margin-left: 5%;
+      }
+
+      .logoRodapeDir {
+        width: 35%;
+      }
+    }
+  </style>
+</header>
+
+<body>
+
+  <div class="menu">
+    <img class="logo" src="Imagens/ICON ELEGANCE PH.PNG"></img>
+    <div class="menuSub">
+      <div class="grupo1">
+        <button class="menuMobile" onclick="mostrarMenu()"><img src="Imagens/Menu.png" alt=""></button>
+        <a class="topicos" href="home.html">Início</a>
+        <a class="topicos" href="produto.html">Produtos</a>
+        <a class="topicos" href="quemSomos.html">Quem somos</a>
+        <a class="topicos" href="pfrete.html">Politica de frete</a>
+      </div>
+
+      <div class="grupo2">
+        <input class="button" type="text" name="pesquisa" placeholder="O que está buscando?">
+        <button class="lupa" onclick="botaolupa()"><img id="lupa" src="Imagens/ICON LUPA.png"></button>
+        <a class="sacola" href="carrinho.html"><img src="Imagens/ICON SACOLA DE CMPRA.png"></img></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cont" id="cont">
+    <div class="Mobil">
+      <a class="Mob" href="home.html">Início</a>
+      <br><br>
+      <a class="Mob" href="produto.html">Produtos</a>
+      <br><br>
+      <a class="Mob" href="quemSomos.html">Quem somos</a>
+      <br><br>
+      <a class="Mob" href="pfrete.html">Politica de frete</a>
+    </div>
+  </div>
+
+  <div class="barra-amarela"></div>
+
+  <div class="container">
+    <div class="carrinho">
+      <h2>Carrinho</h2>
+
+      <div class="produtoCarrinho">
+        <img src="" alt="">
+        <h2 class="descridoproduto"></h2>
+      </div>
+
+      <div class="Finalizar">
+        <h2 class="compra">Confimar Compra</h2>
+        <h2 class="limpar">Limpar Carrinho</h2>
+      </div>
+    </div>
+  </div>
+
+  <a class="WhtsAppFixo" href="https://wa.me/5513991462611" target="_blank">
+    <img src="Imagens/zap.png" alt="WhatsApp">
+  </a>
+
+  <section class="rodape">
+    <div class="barra-amarelaBaix"></div>
+    <div class="contRodape">
+      <img class="logoRodap" src="Imagens/ICON ELEGANCE PH.PNG"></img>
+
+      <a class="instagram" href="https://www.instagram.com/_eleganceph?igsh=ajlmOW9zZTE4cnAw" target="_blank"><img
+          src="Imagens/ICON INSTAGRAM.png"></img></a>
+
+      <a class="whatsApp" href="https://wa.me/5513991462611" target="_blank">
+        <img src="Imagens/zap.png" alt=""></a>
+
+      <img class="logoRodapeDir" src="Imagens/ICON ELEGANCE PH.PNG"></img>
+    </div>
+
+    <div class="txtRodape">
+
+      <p class="direitos">Copyright Elegance PH Santos - 2025 - Todos os direitos reservados</p>
+
+    </div>
+  </section>
+</body>
+<script>
+  function mostrarMenu() {
+    document.getElementById("cont").style.display = "block"
+  }
+</script>
+
+</html>
